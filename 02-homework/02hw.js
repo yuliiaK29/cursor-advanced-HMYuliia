@@ -1,6 +1,6 @@
 let numberN = "";
 let numberM = "";
-let shouldIgnoreEvenNumbers;
+const shouldIgnoreEvenNumbers;
 
 do {
     numberN = +prompt("Enter the first number");
