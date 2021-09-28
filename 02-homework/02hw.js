@@ -1,6 +1,5 @@
 let numberN = "";
 let numberM = "";
-const shouldIgnoreEvenNumbers;
 
 do {
     numberN = +prompt("Enter the first number");
@@ -12,7 +11,7 @@ do {
 } while (Number.isNaN(numberM));
 console.log(numberM);
 
-shouldIgnoreEvenNumbers = confirm("Should we skip even numbers?");
+const shouldIgnoreEvenNumbers = confirm("Should we skip even numbers?");
  
 let sum = 0;
 for(let i = numberN; i<=numberM; i++){
