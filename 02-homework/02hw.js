@@ -3,12 +3,12 @@ let numberM = "";
 
 do {
     numberN = +prompt("Enter the first number");
-} while (Number.isNaN(numberN));
+} while (Number.isNaN(numberN) || numberN == "");
 console.log(numberN);
 
 do {
     numberM = +prompt("Enter the second number");
-} while (Number.isNaN(numberM));
+} while (Number.isNaN(numberM) || numberM == "");
 console.log(numberM);
 
 const shouldIgnoreEvenNumbers = confirm("Should we skip even numbers?");
