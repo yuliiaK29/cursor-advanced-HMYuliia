@@ -17,13 +17,13 @@ const shouldIgnoreEvenNumbers = confirm("Should we skip even numbers?");
 
 if(firstNumber > secondNumber){
     let tempNumber = firstNumber;
-firstNumber = secondNumber;
-secondNumber = tempNumber;
+    firstNumber = secondNumber;
+    secondNumber = tempNumber;
 }
  
 let sum = 0;
-for(let i = firstNumber; i<=secondNumber; i++){
-    if(shouldIgnoreEvenNumbers && i%2===0){
+for(let i = firstNumber; i <= secondNumber; i++){
+    if(shouldIgnoreEvenNumbers && i % 2 === 0){
         continue;
     }
     else{
