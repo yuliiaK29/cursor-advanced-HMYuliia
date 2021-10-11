@@ -1,9 +1,9 @@
 const getRandomArray = (length, min, max) =>{
-    const randomArray = [];
+    const randomNumbers = [];
     for (let i = 0; i < length ; i++) {
-        randomArray.push(Math.round(Math.random() * (max - min) + min));
+        randomNumbers.push(Math.round(Math.random() * (max - min) + min));
 	}
-	return randomArray;
+	return randomNumbers;
 }
 console.log(getRandomArray (15, 1, 100));
 
