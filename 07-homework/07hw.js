@@ -32,8 +32,8 @@ const students = [{
   console.log(getSubjects(students[1]));
 
   const getAverageMark = (student) => {
-    const marksOfSubjects = Object.values(student.subjects);
-    const marksOfAllSubjects = [].concat(...marksOfSubjects);
+    const arrayGrouptedMarksOfSubjects = Object.values(student.subjects);
+    const marksOfAllSubjects = [].concat(...arrayGrouptedMarksOfSubjects);
     const averageMark = (marksOfAllSubjects.reduce((a, b) => a + b, 0) / marksOfAllSubjects.length);
     return +averageMark.toFixed(2);
   }
@@ -50,8 +50,19 @@ const students = [{
   console.log(getStudentsNames(students));
 
   const getBestStudent = (students) => {
-    
+    return students.reduce((previousStudent, currentStudent) => getAverageMark(previousStudent) > getAverageMark(currentStudent) ? previousStudent : currentStudent).name;
   }
+  console.log(getBestStudent(students));
 
+  const calculateWordLetters = (word) => {
+  const quantityOfLetters = word.split('').reduce((accumulator, letter) => {
+      if (accumulator[letter]) {
+        accumulator[letter]++
+      } else {
+        accumulator[letter] = 1
+      }
+      return accumulator}, {})
+    return quantityOfLetters
+};
 
-    
+console.log(JSON.stringify(calculateWordLetters("тест")));

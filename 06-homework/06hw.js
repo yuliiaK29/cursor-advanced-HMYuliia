@@ -34,10 +34,10 @@ console.log(getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 
 
 const badWords = ["fuck", "shit", "bastard", "bollocks"];
 const replaceBadWords = (string) => {
-    let tempString = string.split(' ');
+    let arrayOfSentenceWords = string.split(' ');
     for (let i = 0; i < badWords.length; i++) {
-        tempString = tempString.map((tempString) => tempString.replaceAll(badWords[i], calculateStars(badWords[i].length)))};
-    return tempString.join(' ');
+        arrayOfSentenceWords = arrayOfSentenceWords.map((arrayOfSentenceWords) => arrayOfSentenceWords.replaceAll(badWords[i], calculateStars(badWords[i].length)))};
+    return arrayOfSentenceWords.join(' ');
 }
 const calculateStars = (number) => {
     let starsString = "";
