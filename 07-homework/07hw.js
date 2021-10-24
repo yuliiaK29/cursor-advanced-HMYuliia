@@ -66,3 +66,5 @@ const students = [{
 };
 
 console.log(JSON.stringify(calculateWordLetters("тест")));
+
+
