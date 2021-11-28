@@ -1,7 +1,8 @@
-const getRandomChinese = function(length){
-return new Promise(function(resolve, reject){
+const getRandomChinese = function (length){
+return new Promise(function(resolve){
   let stringOfSymbols = "";
-    while (length > 0) {
+  let copyOfLength = length;
+    while (copyOfLength > 0) {
       setTimeout(() => {
       const timeInMs = Date.now();
       const lastFiveCharacters = timeInMs.toString().slice(-5);
@@ -12,7 +13,7 @@ return new Promise(function(resolve, reject){
         resolve(stringOfSymbols);
     }
     }, 50);
-      length--;
+    copyOfLength--;
     }
   });
 }
