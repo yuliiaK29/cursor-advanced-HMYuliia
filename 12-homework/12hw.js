@@ -5,7 +5,7 @@ function play(e){
     stop();
     const key = document.querySelector(`div[id="${e.keyCode}"]`);
     audio.forEach((item) => {
-        if (item.getAttribute("id") === e.keyCode) {
+        if (item.getAttribute("id") == e.keyCode) {
           item.play();
           key.classList.add("playing")}})
 }
@@ -20,7 +20,7 @@ function click() {
     stop();
     const id = this.getAttribute("id");
     for (let i = 0; i < audio.length; i++) {
-        if (audio[i].getAttribute("id") === id) {
+        if (audio[i].getAttribute("id") == id) {
             audio[i].play();
             this.classList.add("playing");
         }}}
